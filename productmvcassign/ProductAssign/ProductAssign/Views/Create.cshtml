@@ -1,0 +1,56 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model ProductAssign.Models.Product
+
+<div class="container">
+    @using (Html.BeginForm("Validate", "Product", "POST"))
+    {
+        <table class="table table-bordered">
+            <tr>
+                <td>
+                    Product Id:
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.Pid)
+                </td>
+                <td>@Html.ValidationMessageFor(m => m.Pid)</td>
+            </tr>
+            <tr>
+                <td>
+                    Product Name:
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.pname)
+                </td>
+                <td>@Html.ValidationMessageFor(m => m.pname)</td>
+            </tr>
+            <tr>
+                <td>
+                    Product Price:
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.price)
+                </td>
+                <td>@Html.ValidationMessageFor(m => m.price)</td>
+            </tr>
+            <tr>
+                <td>
+                    Product Stock:
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.stock)
+
+                </td>
+                <td>@Html.ValidationMessageFor(m => m.stock)</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <center><input type="submit" value="Submit" /></center>
+                </td>
+            </tr>
+        </table>}
+    <center>@Html.ActionLink("Product List", "Index")</center>
+</div>

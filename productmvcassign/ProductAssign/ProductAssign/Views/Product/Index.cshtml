@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<ProductAssign.Models.Product>
+
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Stock</th>
+        </tr>
+
+
+        @foreach (var prod in Model)
+        {
+<tr>
+    <td>
+        @prod.Pid
+    </td>
+    <td>
+        @prod.pname
+    </td>
+    <td>
+        @prod.price
+    </td>
+    <td>
+        @prod.stock
+    </td>
+</tr>            }
+
+    </table>
+    <center>@Html.ActionLink("Add Product", "Create")</center>
+</div>
