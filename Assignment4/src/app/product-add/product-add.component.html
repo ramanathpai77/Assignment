@@ -1,0 +1,28 @@
+<h1>Add product here</h1>
+<div class="forms">
+  <form >
+    <table>
+      <tr>
+        <td>PID</td>
+        <td><input type="text" [(ngModel)]="item.pid"></td>
+      </tr>
+      <tr>
+        <td>Product Name</td>
+        <td><input type="text" [(ngModel)]="item.pname"></td>
+      </tr>
+        <tr>
+            <td>Product Price</td>
+            <td><input type="text" [(ngModel)]="item.price"></td>
+          </tr>
+          <tr>
+                <td>stock</td>
+                <td><input type="text" [(ngModel)]="item.stock"></td>
+              </tr>
+              <tr>
+        <td colspan="2">
+          <button class="btn-primary" (click)="addProduct()">Add Product</button>
+        </td>
+      </tr>
+    </table>
+    </form>
+  </div>
